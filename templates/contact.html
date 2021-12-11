@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Immanuw'EL - Home Studio">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Immanuw'EL - Contact</title>
+
+  <!-- Favicon -->
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='img/core-img/favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Anaheim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap" rel="stylesheet">
+    
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+<style>
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Sirin Stencil', cursive;
+  }
+</style>
+</head>
+
+<body style = "font-family:'Anaheim', sans-serif;">
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area">
+    <!-- Main Header Start -->
+    <div class="main-header-area">
+      <div class="classy-nav-container breakpoint-off">
+        <!-- Classy Menu -->
+        <nav class="classy-navbar justify-content-between" id="pocaNav">
+  
+          <!-- Logo -->
+          <a class="nav-brand" href="index.html">Immanuw'EL</a>
+  
+          <!-- Navbar Toggler -->
+          <div class="classy-navbar-toggler">
+            <span class="navbarToggler"><span></span><span></span><span></span></span>
+          </div>
+  
+          <!-- Menu -->
+          <div class="classy-menu">
+  
+            <!-- Menu Close Button -->
+            <div class="classycloseIcon">
+              <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+            </div>
+  
+            <!-- Nav Start -->
+            <div class="classynav">
+              <ul id="nav">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">Vision</a></li>
+                <li><a href="#">Music</a>
+                  <ul class="dropdown">
+                    <li><a href="{{ url_for('album') }}">- Albums</a></li>
+                    <li><a href="{{ url_for('solo') }}">- Solo</a></li>
+                    <li><a href="{{ url_for('recueil') }}">- Recueil</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Videos</a>
+                  <ul class="dropdown">
+                    <li><a href="{{ url_for('lyrics') }}">- Lyrics</a></li>
+                    <li><a href="{{ url_for('worshiplive') }}" style="font-size:12px">- Live worship
+                        sessions</a></li>
+                    <li><a href="{{ url_for('exhortation') }}">- Exhortations</a></li>
+                  </ul>
+                </li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li class="current-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+              </ul>
+  
+              <!-- Top Social Area -->
+              <div class="top-social-area">
+                <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+                <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+                <a href="#" class="fa fa-youtube-play" aria-hidden="true"></a>
+              </div>
+  
+            </div>
+            <!-- Nav End -->
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(static/img/bg-img/map.jpg);">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title mt-70">Contact</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+
+  <!-- ***** Contact Area Start ***** -->
+  <section class="poca-contact-area mt-50 mb-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="google-maps mb-100">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248360.75594994787!2d9.467278500000011!3d0.3790283000000069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e1!3m2!1sen!2sga!4v1589144169944!5m2!1sen!2sga"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Contact Information -->
+        <div class="col-12 col-md-6">
+          <div class="contact-information">
+            <div class="contact-heading mb-50">
+              <h2>Informations de contact</h2>
+              <h6 style="font-weight:lighter">Pour tout besoin d'informations, se referer aux coordonnées suivantes :</h6>              
+            </div>
+
+
+            <h5>Address: Libreville - Gabon, GA</h5>
+            <h5>Phone: +241 00 000 000</h5>
+            <h5>Email: info@immanuw-el.org </h5>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-12 col-md-6">
+          <div class="contact-form">
+            <div class="contact-heading">
+              <h2>Laisser un message</h2>
+              <h5>Un mail de reponse vous sera adressé si besoin</h5>
+            </div>
+            <!-- Form -->
+            <form action="#" method="post">
+              <div class="row">
+                <div class="col-12">
+                  <input type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
+                </div>
+                <div class="col-12">
+                  <input type="email" name="message-email" class="form-control mb-30" placeholder="Your Email">
+                </div>
+                <div class="col-12">
+                  <textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn poca-btn">Envoyer le message</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Contact Area End ***** -->
+
+  <!-- ***** Newsletter Area Start ***** -->
+  <section class="poca-newsletter-area bg-img bg-overlay pt-50 jarallax"
+    style="background-image: url(static/img/music/10.jpg);">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Newsletter Content -->
+        <div class="col-12 col-lg-6">
+          <div class="newsletter-content mb-50">
+            <h2>Souscrire a la Newsletter</h2>
+            <h6>Abonnez-vous pour recevoir les dernieres publications</h6>
+          </div>
+        </div>
+        <!-- Newsletter Form -->
+        <div class="col-12 col-lg-6">
+          <div class="newsletter-form mb-50">
+            <form action="#" method="post">
+              <input type="email" name="nl-email" class="form-control" placeholder="Your Email">
+              <button type="submit" class="btn">Souscrire</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Newsletter Area End ***** -->
+
+  <!-- ***** Footer Area Start ***** -->
+  <footer class="footer-area section-padding-80-0">
+    <div class="container">
+      <div class="row">
+  
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-footer-widget mb-80">
+            <!-- Widget Title -->
+            <h4 class="widget-title">Immanuw'EL</h4>
+  
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos nesciunt aut enim. Quae itaque voluptatum,
+              dicta nam, quia modi ducimus accusamus debitis at</p>
+            <div class="copywrite-content">
+              <p>&copy;
+  
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
+                with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                  target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-footer-widget mb-80">
+            <!-- Widget Title -->
+            <h4 class="widget-title">Categories</h4>
+  
+            <!-- Catagories Nav -->
+            <nav>
+              <ul class="catagories-nav">
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Musique</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">WLS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+  
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-footer-widget mb-80">
+            <!-- Widget Title -->
+            <h4 class="widget-title">Worship live session</h4>
+  
+            <!-- Single Latest Episodes -->
+            <div class="single-latest-episodes">
+              <p class="episodes-date">December 9, 2020</p>
+              <a href="#" class="episodes-title">Live worship a Libreville</a>
+            </div>
+            <!-- Single Latest Episodes -->
+            <div class="single-latest-episodes">
+              <p class="episodes-date">Fevrier 10, 2020</p>
+              <a href="#" class="episodes-title">Live worship a Port-Gentil</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Single Footer Widget -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-footer-widget mb-80">
+            <!-- Widget Title -->
+            <h4 class="widget-title">Suivez-nous</h4>
+            <!-- Social Info -->
+            <div class="footer-social-info">
+              <a href="#" class="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i
+                  class="fa fa-facebook"></i></a>
+              <a href="#" class="twitter" data-toggle="tooltip" data-placement="top" title="Dailymotion"><i
+                  class="fa fa-dailymotion"></i></a>
+              <a href="#" class="youtube" data-toggle="tooltip" data-placement="top" title="YouTube"><i
+                  class="fa fa-youtube-play"></i></a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </footer>
+  <!-- ***** Footer Area End ***** -->
+
+  <!-- ******* All JS ******* -->
+  <!-- jQuery js -->
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <!-- Popper js -->
+  <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+  <!-- Bootstrap js -->
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <!-- All js -->
+  <script src="{{ url_for('static', filename='js/poca.bundle.js') }}"></script>
+  <!-- Active js -->
+  <script src="{{ url_for('static', filename='js/default-assets/active.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% block head %}
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="{% block content %}{% endblock %}">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Title -->
+        <title>{% block title %}{% endblock %}</title>
+
+        <!-- Favicon -->
+
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/fav/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/fav/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/fav/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ url_for('static', filename='img/fav/site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ url_for('static', filename='img/fav/safari-pinned-tab.svg') }}" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!--Favicon end-->
+        <link rel="icon" href="{{ url_for('static', filename='img/logo.png') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Anaheim&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap" rel="stylesheet">
+        <!-- Core Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+        
+        <style>
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: 'Sirin Stencil', cursive;
+            }
+        </style>
+    </head>
+    {% endblock %}
+
+    {% block body %}    
+    
+    {% block header %}
+        <header class="header-area">
+            <!-- Main Header Start -->
+            <div class="main-header-area">
+                <div class="classy-nav-container breakpoint-off">
+                    <!-- Classy Menu -->
+                    <nav class="classy-navbar justify-content-between" id="pocaNav">
+        
+                        <!-- Logo -->                
+                        <img src="../static/img/logo.svg" style = "margin-top:15px" class="img-fluid" alt="Immanuw-EL" width="8%" height="8%">                
+        
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span>
+                        </div>
+        
+                        <!-- Menu -->
+                        <div class="classy-menu">
+        
+                            <!-- Menu Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+        
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul id="nav">
+                                    <li class="{% block selected_item1 %}{% endblock %}"><a href="{{ url_for('home') }}" style="font-weight: lighter;">Home</a></li>
+                                    <!--<li class="{% block selected_item2 %}{% endblock %}"><a href="{{ url_for('about') }}" style="font-weight: lighter;">Vision</a></li>-->
+                                    <li class="{% block selected_item3 %}{% endblock %}"><a href="#" style="font-weight: lighter;">Music</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{{ url_for('album') }}" style="font-weight: lighter;">- Albums</a></li>
+                                            <li><a href="{{ url_for('solo') }}" style="font-weight: lighter;">- Solo</a></li>
+                                            <li><a href="{{ url_for('recueil') }}" style="font-weight: lighter;">- Recueil</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="{% block selected_item4 %}{% endblock %}"><a href="#" style="font-weight: lighter;">Videos</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{{ url_for('lyrics') }}" style="font-weight: lighter;">- Lyrics</a></li>
+                                            <!--<li><a href="{{ url_for('worshiplive') }}" style="font-size:12px; font-weight: lighter;">- Live worship
+                                                    sessions</a></li>-->
+                                            <li><a href="{{ url_for('exhortation') }}" style="font-weight: lighter;">- Exhortations</a></li>
+                                        </ul>
+                                    </li>                                    
+                                    <li class="{% block selected_item6 %}{% endblock %}"><a href="{{ url_for('contact') }}" style="font-weight: lighter;">Contact</a></li>
+                                   <!-- <li class="{% block selected_item5 %}{% endblock %}"><a href="{{ url_for('blog') }}" style="font-weight: lighter; background:#5ac700; color :#FFFFFF; border-radius:5px">Blog</a></li>-->
+                                </ul>
+        
+                                <!-- Top Social Area -->
+                                <div class="top-social-area">
+                                    <a href="#" class="fa fa-facebook" aria-hidden="true"></a>                                    
+                                    <a href="#" class="fa fa-youtube-play" aria-hidden="true"></a>
+                                </div>
+        
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    {% endblock %}
+
+    {% block footer %}
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-80-0">
+        <div class="container">
+            <div class="row">
+    
+                <!-- Single Footer Widget -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-footer-widget mb-80">
+                        <!-- Widget Title -->
+                        <h4 class="widget-title">Immanuw'EL</h4>
+    
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos nesciunt aut enim. Quae itaque
+                            voluptatum, dicta nam, quia modi ducimus accusamus debitis at</p>
+                        <div class="copywrite-content">
+                            <p>&copy;
+    
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                                template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                    href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Single Footer Widget -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-footer-widget mb-80">
+                        <!-- Widget Title -->
+                        <h4 class="widget-title">Categories</h4>
+    
+                        <!-- Catagories Nav -->
+                        <nav>
+                            <ul class="catagories-nav">
+                                <li><a href="#">A propos</a></li>
+                                <li><a href="#">Musique</a></li>
+                                <li><a href="#">Videos</a></li>
+                                <li><a href="#">WLS</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+    
+                <!-- Single Footer Widget -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-footer-widget mb-80">
+                        <!-- Widget Title -->
+                        <h4 class="widget-title">Worship live session</h4>
+    
+                        <!-- Single Latest Episodes -->
+                        <div class="single-latest-episodes">
+                            <p class="episodes-date">December 9, 2020</p>
+                            <a href="#" class="episodes-title">Live worship a Libreville</a>
+                        </div>
+                        <!-- Single Latest Episodes -->
+                        <div class="single-latest-episodes">
+                            <p class="episodes-date">Fevrier 10, 2020</p>
+                            <a href="#" class="episodes-title">Live worship a Port-Gentil</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Single Footer Widget -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-footer-widget mb-80">
+                        <!-- Widget Title -->
+                        <h4 class="widget-title">Suivez sur</h4>
+                        <!-- Social Info -->
+                        <div class="footer-social-info">
+                            <a href="#" class="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i
+                                    class="fa fa-facebook"></i></a>
+                            <a href="#" class="twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i
+                                    class="fab fa-dailymotion"></i></a>
+                            <a href="#" class="youtube" data-toggle="tooltip" data-placement="top" title="YouTube"><i
+                                    class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+
+    {% block script %}
+    <!-- ******* All JS ******* -->
+    <!-- jQuery js -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <!-- Popper js -->
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <!-- Bootstrap js -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- All js -->
+    <script src="{{ url_for('static', filename='js/poca.bundle.js') }}"></script>
+    <!-- Active js -->
+    <script src="{{ url_for('static', filename='js/default-assets/active.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    {% endblock %}
+{% endblock %}
+</html>

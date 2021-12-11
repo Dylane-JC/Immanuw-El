@@ -1,0 +1,274 @@
+{% extends "layout.html" %}
+
+{% block title %} Accueil {% endblock %}
+
+{% block content%}Accueil{% endblock %}
+
+{% block selected_item1 %}current-item{% endblock %}
+
+{% block body %}
+<body style="font-family:'Anaheim', sans-serif;">
+  <!-- ***** Header Area Start ***** -->
+  {% block header %}
+  {{ super() }}
+  {% endblock %}
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Welcome Area Start ***** -->
+  <section class="welcome-area">
+    <!-- Welcome Slides -->
+    <div class="welcome-slides owl-carousel">
+
+      <!-- Single Welcome Slide -->
+      <div class="welcome-welcome-slide bg-img bg-overlay" style="background-image: url(static/img/bg-img/1.jpg);">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-12">
+              <!-- Welcome Text -->
+              <div class="welcome-text">
+                <h2 style="font-weight: lighter;">Immanuw-EL</h2>
+                <h5 style= "font-family: 'Anaheim', sans-serif; font-weight: lighter;">Home studio for live worship session around the name of the Lord Yehoshoua ha Mashiah</h5>
+                <div class="welcome-btn-group">
+                  <a href="{{ url_for('lyrics') }}" class="btn poca-btn btn-2 m-2">Accord de musique <i class="fa fa-music"
+                      style="font-size:25px; color:#5ac700"></i></a>
+                  <a href="{{ url_for('album') }}" class="btn poca-btn m-2 ml-0 active">Ecouter l'album récent</a>                  
+                </div>
+              </div>
+              <!-- Welcome Music Area -->
+              <div class="poca-music-area mt-100 d-flex align-items-center flex-wrap" data-animation="fadeInUp" data-delay="900ms" style ="border:1px solid #5ac700; border-radius:120px 0 0 120px;">
+                <div class="poca-music-thumbnail" >
+                  <img src="{{ url_for('static', filename='img/bg-img/0.jpg') }}" alt="" style ="border:1px solid #5ac700; border-radius:120px 0 0 120px">
+                </div>
+                <div class="poca-music-content">
+                  <span class="music-published-date">Janvier 2022</span>
+                  <h2>Immanuw'EL - Le vrai cep</h2>
+                  <div class="music-meta-data">
+                    <p>Par <a href="#" class="music-author">Yannick Mossavou</a> | <a href="#" class="music-catagory">Immanuw-El</a> | <a href="#" class="music-duration">00:03:55</a></p>
+                  </div>
+                  <!-- Music Player -->
+                  <div class="poca-music-player">
+                    <audio preload="auto" controls>
+                      <source src="{{ url_for('static', filename='audio/levraicep.mp3') }}">
+                    </audio>
+                  </div>
+                  <!-- Likes, Share & Download -->
+                  <div class="likes-share-download d-flex align-items-center justify-content-between">
+                    <a href="#"><i class=""></i></a>
+                    <div>
+                      <a href="#" class="mr-4"><i class="" aria-hidden="true"></i> </a>
+                      <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Telecharger (12)</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Welcome Area End ***** -->
+
+  <!-- ***** Latest Episodes Area Start ***** -->
+  <section class="poca-latest-epiosodes section-padding-80" style = "background-image: url(static/img/bg-img/about.png); background-position:top; background-repeat:no-repeat">
+      <div class = "container">
+          <div class = "row">
+              <div class = "col-12">
+                <div class = "section-heading text-center">
+                    <h2 style = "color: #FFFFFF;">Vision & Projets</h2>
+                    <div class="line"></div>
+              </div>                  
+              </div>
+          </div>
+      </div>
+
+      <div class = "container">
+          <div class = "row">
+            <div class = "col-lg-6">
+                <a href="{{ url_for('about') }}" class = "ui green fluid button" style="margin-top: 600px; border:1 solid #5ac700; border-radius: 50px; background:#5ac700;">En savoir plus</a>
+            </div>
+            <div class="col-lg-6">
+              <h5 style = "color: #FFFFFF;">Presentation</h5>
+                <p style = "color:#bababa;">Ce site n’est qu’une plate-forme de ce que le Seigneur a mis dans mon cœur.
+                En effet, depuis que je me suis converti 2008, le seigneur avait déjà mis le chant sur ma langue. En cette même année
+                j’ai fait partie d’un groupe de chantres d’une église à Libreville. Mais j’ai du peu de temps après le quitter après
+                avoir participé à une prestation. Je n’avais pas trouvé ce que je recherchais fondamentalement, c’est-à-dire la
+                crainte
+                du Seigneur.</p>
+                
+                    <p style = "color:#bababa;">Par ailleurs le Seigneur a permis que je sois avec d’autres frères et sœurs avec qui nous nous retrouvions pour prier
+                    et
+                    passer du temps dans la consécration et les encouragements mutuels au travers des partages des chants nouveaux. Nulle
+                    n’était question de se retrouver pour chanter simplement ou pour enregistrer des albums. Mais nous nous retrouvions
+                    parce que nous aimions la présence du Seigneur.</p>
+
+                    <p style = "color:#bababa;">
+                      Ce n’est qu’en 2012 où nous avions fait notre premier album, suivi d’un second enregistré en live sans rechercher un
+                      quelconque aspect technique, désirant que seule la vie du Seigneur en soit le moteur pour édifier le monde entier....
+                    </p>
+            </div>
+          </div>
+      </div>
+
+  </section>
+  <section class="poca-latest-epiosodes section-padding-80" style="background-image: url(static/img/bg-img/2.jpg)">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center">
+            <h2 style = "color:white">Albums & Videos</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Menu -->
+
+    <div class = "">
+        <div class="row">
+            <div class = "col-lg-6">
+                <section style = "background-image: url('static/img/bg-img/album.png'); height: 600px; background-repeat: no-repeat; margin-left:120px; border-right-color: grey;">
+                    <img src ="{{ url_for('static', filename = 'img/album.gif') }}" style = "width:40%; height:50%; border-radius: 50px">
+                        <p style = "position:relative; max-width: 400px; top:50px; left:160px; text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, enim totam. A quod excepturi sed illum deleniti
+                          nesciunt maiores ex dicta dolor recusandae accusamus, dignissimos accusantium mollitia quam quidem ut. 
+                        <div class="ui labeled button" tabindex="0" style = "position:relative; max-width: 400px; top:50px; left:160px;">
+                          <a href = "{{ url_for('album') }}" class="ui basic green button" style = "border-radius: 50px 0 0 50px; background:#5ac700; border:1px solid #5ac700">
+                            <i class="music icon"></i> Albums
+                          </a>
+                          <a class="ui basic left pointing green label">
+                            8
+                          </a>
+                        </div>
+                        </p>
+                    
+                </section>
+                
+            </div>
+              <div class="col-lg-6">
+                <section style="background-image: url('static/img/bg-img/videos.png'); height: 600px; background-repeat: no-repeat; ">
+                  <img src="{{ url_for('static', filename = 'img/video.gif') }}"
+                    style="width:42%; height:35%; border-radius: 50px; position:relative; max-width: 400px; top:390px; left:293px">
+                      <p style = "position:relative; max-width: 400px; top:30px; left:40px; text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore assumenda illum harum mollitia porro dicta sed quod.
+                        Tenetur necessitatibus aliquid consequuntur obcaecati perferendis ipsam! Illum sed temporibus unde tempora numquam!
+                        <div class="ui labeled button" tabindex="0" style = "position:relative; max-width: 400px; top:30px; left:40px;">
+                          <a href = "{{ url_for('worshiplive') }}" class="ui green button" style = "border-radius: 50px 0 0 50px; background:#5ac700; border:1px solid #5ac700">
+                            <i class="play icon"></i> Videos
+                          </a>
+                          <a class="ui basic green left pointing label">
+                            13
+                          </a>
+                        </div>
+                      </p>
+                  
+                </section>
+                
+              </div>
+        </div>
+    </div>
+
+   
+  </section>
+  <!-- ***** Latest Episodes Area End ***** -->
+
+  <!-- ***** Featured Guests Area Start ***** -->
+  <section class="featured-guests-area" style = "margin-bottom: 50px;">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center">
+            <h2>Accords & Recueils</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-around">
+        <div class = "col-lg-3">
+          <h5>Les accords</h5>
+          <p style = "text-align: justify;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae cumque sapiente vel, distinctio, nostrum voluptatibus omnis, dignissimos consequuntur voluptas non eveniet nemo magni quis? In laborum veniam a animi soluta?
+          </p>
+          <h5>Le receuil</h5>
+          <p style = "text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam cupiditate nesciunt sunt quo doloribus non quod asperiores tempore. Explicabo, ea tenetur eius voluptatum voluptatem accusamus! A, provident! Facere, cumque fugit!</p>
+        </div>
+        <div class = "col-lg-9">
+            <div class="ui segment" style="border-radius: 20px; box-shadow: inset 0 0 2em rgb(15, 35, 35);">
+              <div class="ui two column very relaxed grid">
+                <div class="column">
+                  <img src ="{{ url_for('static', filename='img/music/noote.png') }}"><hr>
+                  <img src ="{{ url_for('static', filename='img/music/notee.png') }}">
+                  <a class = "ui green outline fluid button" href="{{ url_for('lyrics_view') }}" style = "border:1px solid #5ac700; background:#5ac700;">Accords de musique</a>
+                </div>
+                <div class="column" style="margin: auto;">
+                  <img src="{{ url_for('static', filename='img/music/desk.png') }}">
+                  <a class="ui basic green fluid button" href="{{ url_for('recueil') }}" style = "border:1px solid #5ac700; color:#5ac700;">Recueils de chants</a>
+                </div>
+              </div>
+              <div class="ui vertical divider">
+                <span style = "border:1px solid #5ac700; border-radius:50px; padding:5px">ET</span>
+              </div>
+            </div>
+        </div>       
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color:rgb(15, 35, 35); padding :100px">
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-lg-12">
+                <h1 style="text-align:center; color: #FFFFFF; padding: 70px; font-family: 'Dosis', sans-serif; font-weight: lighter; text-align: justify;"><i class = "ui big quote left icon" style = "color:#5ac700"></i>  
+                  Parfois nous avons l’impression que le Seigneur  Yehoshoua Mashiah est loin de nous, ou bien
+                  qu’il est perché dans le ciel ne pensant à nous que pour nous sanctionner en cas de faute.
+                  <b style="font-weight: bold">En vérité, Il est plus près de chacun de nous à un tel point que nous ne pouvons imaginer.</b><i
+                    class="ui big quote right icon" style = "color:#5ac700"></i></h1>                
+            </div>
+            <div class = "col-lg-12">
+              <div class = "mx-auto" style = "width:200px">
+                  <h5 style="color:#5ac700; font-family: 'Dosis', sans-serif;">- Yannick Moussavou</h5>
+              </div>                
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- ***** Featured Guests Area End ***** -->
+
+  <!-- ***** Newsletter Area Start ***** -->
+  <section class="poca-newsletter-area bg-img bg-overlay pt-50 jarallax" style="background-image: url(static/img/music/10.jpg);">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Newsletter Content -->
+        <div class="col-12 col-lg-6">
+          <div class="newsletter-content mb-50">
+            <h2>Souscrire a la Newsletter</h2>
+            <h6>Abonnez-vous pour recevoir les dernieres publications</h6>
+          </div>
+        </div>
+        <!-- Newsletter Form -->
+        <div class="col-12 col-lg-6">
+          <div class="newsletter-form mb-50">
+            <form action="#" method="post">
+              <input type="email" name="nl-email" class="form-control" placeholder="Your Email">
+              <button type="submit" class="btn">Souscrire</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Newsletter Area End ***** -->
+
+  {% block footer %}
+  {{ super() }}
+  {% endblock %}
+  <!-- ***** Footer Area End ***** -->
+
+  {% block script %}
+  {{ super() }}
+  {% endblock %}
+
+</body>
+{% endblock %}
+</html>

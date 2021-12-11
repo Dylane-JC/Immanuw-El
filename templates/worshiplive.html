@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Immanuw'EL - Home Studio">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Immanuw'EL - Worship Live Session</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='img/core-img/favicon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anaheim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap" rel="stylesheet">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Sirin Stencil', cursive;
+        }
+.pulse {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #5ac700;
+  background-image: url(../static/img/music/play.svg);
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(90, 226, 12, 0.329);
+  animation: pulse 2s infinite;
+}
+
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(90, 226, 12, 0.329);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(90, 226, 12, 0.329);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(90, 226, 12, 0.329);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(90, 226, 12, 0.329);
+      box-shadow: 0 0 0 10px rgba(90, 226, 12, 0.329);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(90, 226, 12, 0.329);
+      box-shadow: 0 0 0 0 rgba(90, 226, 12, 0.329);
+  }
+}
+    </style>
+</head>
+
+<body style="font-family:'Anaheim', sans-serif;">
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="pocaNav">
+    
+                    <!-- Logo -->
+                    <a class="nav-brand" href="index.html">Immanuw'EL</a>
+    
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+    
+                    <!-- Menu -->
+                    <div class="classy-menu">
+    
+                        <!-- Menu Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+    
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav">
+                                <li><a href="{{ url_for('home') }}">Home</a></li>
+                                <li><a href="{{ url_for('about') }}">Vision</a></li>
+                                <li><a href="#">Music</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{{ url_for('album') }}">- Albums</a></li>
+                                        <li><a href="{{ url_for('solo') }}">- Solo</a></li>
+                                        <li><a href="{{ url_for('recueil') }}">- Recueil</a></li>
+                                    </ul>
+                                </li>
+                                <li class="current-item"><a href="#">Videos</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{{ url_for('lyrics') }}">- Lyrics</a></li>
+                                        <li><a href="{{ url_for('worshiplive') }}" style="font-size:12px">- Live worship
+                                                sessions</a></li>
+                                        <li><a href="{{ url_for('exhortation') }}">- Exhortations</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                            </ul>
+    
+                            <!-- Top Social Area -->
+                            <div class="top-social-area">
+                                <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+                                <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+                                <a href="#" class="fa fa-youtube-play" aria-hidden="true"></a>
+                            </div>
+    
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Breadcrumb Area Start ***** -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(static/img/music/39.png);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <h2 class="title mt-70">Worship Live Session</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="breadcumb--con">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Videos</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Worship live session</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Breadcrumb Area End ***** -->
+
+    <!-- ****** WOrship videos ******* -->
+        <section>
+            <div class = "container">
+                <div class = "row">
+                    {% for l in rq %}
+                        <div class="col-lg-4">
+                            <div class="ui cards" style="margin-bottom:20px;">
+                                <div class="card" style="border-radius: 40px; width: 500px; background-color: rgb(225, 225, 225);">
+                                    <h6 style="position: absolute; color:#FFF; font-size: 1.6rem; left:10px; top:20px; font-weight: lighter">{{ l.video_title }}</h6>
+                                    <span style="position: inherit; font-size: 1rem; left:60px; color:#FFF; top:120px; font-family: 'Nosifer', cursive">{{l.video_author}}</span>
+                                    <img src="{{ l.video_img }}" style="border-radius: 20px;">
+                                </div>
+                                <a href="{{ url_for('worshiplive_view', v=l.video_ref) }}">
+                                    <i class="pulse" style="font-size:0px; position: relative; left : 263px; bottom:144px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    <!-- ****** WOrship videos Area End ****** -->
+
+    <!-- ***** Newsletter Area Start ***** -->
+    <section class="poca-newsletter-area bg-img bg-overlay pt-50 jarallax"
+        style="background-image: url(static/img/music/10.jpg);">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Newsletter Content -->
+                <div class="col-12 col-lg-6">
+                    <div class="newsletter-content mb-50">
+                        <h2>Souscrire a la Newsletter</h2>
+                        <h6>Abonnez-vous pour recevoir les dernieres publications</h6>
+                    </div>
+                </div>
+                <!-- Newsletter Form -->
+                <div class="col-12 col-lg-6">
+                    <div class="newsletter-form mb-50">
+                        <form action="#" method="post">
+                            <input type="email" name="nl-email" class="form-control" placeholder="Your Email">
+                            <button type="submit" class="btn">Souscrire</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Newsletter Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-80-0">
+        <div class="container">
+            <div class="row">
+
+                <!-- Single Footer Widget -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-footer-widget mb-80">
+                        <!-- Widget Title -->
+                        <h4 class="widget-title">Immanuw'EL</h4>
+
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos nesciunt aut enim. Quae itaque
+                            voluptatum,
+                            dicta nam, quia modi ducimus accusamus debitis at</p>
+                        <div class="copywrite-content">
+                            <p>&copy;
+
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                                template is made
+                                with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                                    target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Footer Widget -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-footer-widget mb-80">
+                        <!-- Widget Title -->
+                        <h4 class="widget-title">Categories</h4>
+
+                        <!-- Catagories Nav -->
+                        <nav>
+                            <ul class="catagories-nav">
+                                <li><a href="#">A propos</a></li>
+                                <li><a href="#">Musique</a></li>
+                                <li><a href="#">Videos</a></li>
+                                <li><a href="#">WLS</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Single Footer Widget -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-footer-widget mb-80">
+                        <!-- Widget Title -->
+                        <h4 class="widget-title">Worship live session</h4>
+
+                        <!-- Single Latest Episodes -->
+                        <div class="single-latest-episodes">
+                            <p class="episodes-date">December 9, 2020</p>
+                            <a href="#" class="episodes-title">Live worship a Libreville</a>
+                        </div>
+                        <!-- Single Latest Episodes -->
+                        <div class="single-latest-episodes">
+                            <p class="episodes-date">Fevrier 10, 2020</p>
+                            <a href="#" class="episodes-title">Live worship a Port-Gentil</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Footer Widget -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-footer-widget mb-80">
+                        <!-- Widget Title -->
+                        <h4 class="widget-title">Suivez-nous</h4>
+                        <!-- Social Info -->
+                        <div class="footer-social-info">
+                            <a href="#" class="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i
+                                    class="fa fa-facebook"></i></a>
+                            <a href="#" class="twitter" data-toggle="tooltip" data-placement="top"
+                                title="Dailymotion"><i class="fa fa-dailymotion"></i></a>
+                            <a href="#" class="youtube" data-toggle="tooltip" data-placement="top" title="YouTube"><i
+                                    class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+    <!-- ******* All JS ******* -->
+    <!-- jQuery js -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <!-- Popper js -->
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <!-- Bootstrap js -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- All js -->
+    <script src="{{ url_for('static', filename='js/poca.bundle.js') }}"></script>
+    <!-- Active js -->
+    <script src="{{ url_for('static', filename='js/default-assets/active.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script>
+        $('.special.cards .image').dimmer({
+            on: 'hover'
+        });
+    </script>
+</body>
+
+</html>
